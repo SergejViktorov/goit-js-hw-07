@@ -6,12 +6,14 @@ const ingredients = [
     'Зелень',
     'Приправы',
   ];
-console.log(ingredients);
 
   const ingredientsElement = document.querySelector('ul#ingredients');
-  console.log(ingredientsElement);
+   
 
-  const li = document.createElement('li');
-  ingredientsElement.appendChild(li)
-  
-  ingredients.map(element => li.appendChild(element.textContent) )
+  const elements = ingredients.map(element =>{
+    const itemEl = document.createElement('li');
+    itemEl.textContent = element;
+    return itemEl;
+  });
+
+  ingredientsElement.append(...elements)
