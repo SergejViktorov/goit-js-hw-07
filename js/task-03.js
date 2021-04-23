@@ -21,7 +21,8 @@ const images = [
   ulEl.style.display = 'flex';
   ulEl.style.flexDirection = 'column';
   ulEl.style.listStyle = 'none';
+  ulEl.style.textAlign = 'center';
 
   const imgItem = images.map(imgEl => {
-    ulEl.insertAdjacentHTML('afterbegin', `<li><img src=${imgEl.url} alt=${imgEl.alt} width="440"></li>`)
+    ulEl.insertAdjacentHTML('afterbegin', `<li><img src=${imgEl.url} alt=${imgEl.alt} width="640"></li>`)
  } );
