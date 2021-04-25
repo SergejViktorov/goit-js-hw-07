@@ -22,13 +22,9 @@ ulEl.style.flexDirection = 'column';
 ulEl.style.listStyle = 'none';
 ulEl.style.textAlign = 'center';
 
-const allSring = [];
+const greatElement = images.map(imgEl => {
+  const elementToAdd = `<li><img src=${imgEl.url} alt=${imgEl.alt} width="640"></li>`;
+  return elementToAdd;
+});
 
-const greatElement = images
-  .map(imgEl => {
-    const elementToAdd = `<li><img src=${imgEl.url} alt=${imgEl.alt} width="640"></li>`;
-    allSring.push(elementToAdd);
-  })
-  .join('');
-  
-ulEl.insertAdjacentHTML('afterbegin', allSring);
+ulEl.insertAdjacentHTML('afterbegin', greatElement);
