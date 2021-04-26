@@ -22,9 +22,11 @@ ulEl.style.flexDirection = 'column';
 ulEl.style.listStyle = 'none';
 ulEl.style.textAlign = 'center';
 
-const greatElement = images.map(imgEl => {
-  const elementToAdd = `<li><img src=${imgEl.url} alt=${imgEl.alt} width="640"></li>`;
-  return elementToAdd;
-});
+const greatElement = images
+  .map(imgEl => {
+    const elementToAdd = `<li><img src=${imgEl.url} alt=${imgEl.alt} width="640"></li>`;
+    return elementToAdd;
+  })
+  .join('');
 
 ulEl.insertAdjacentHTML('afterbegin', greatElement);
